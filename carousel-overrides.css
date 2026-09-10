@@ -34,3 +34,10 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--yellow);outline-off
   .social-grid{grid-template-columns:1fr;gap:14px}
   .social-grid img,.social-a,.social-b,.social-c{height:min(78vw,320px);margin-top:0}
 }
+
+/* LogoMarquee contínuo: duas faixas idênticas evitam salto e espaço vazio. */
+.marquee-track{gap:0;animation:logo-marquee 30s linear infinite;will-change:transform}
+.marquee-group{display:flex;align-items:center;gap:42px;flex:none;padding-right:42px}
+@keyframes logo-marquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@media(max-width:800px){.marquee-group{gap:25px;padding-right:25px}.marquee-track{animation-duration:24s}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none;transform:none}}
