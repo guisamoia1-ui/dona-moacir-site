@@ -1,0 +1,36 @@
+.feature-image{isolation:isolate}
+.carousel-arrow{position:absolute;z-index:5;top:50%;transform:translateY(-50%);width:46px;height:46px;border:1px solid rgba(255,255,255,.55);border-radius:50%;background:rgba(17,16,20,.48);color:var(--white);cursor:pointer;font-size:22px;line-height:1;transition:background .2s,transform .2s}
+.carousel-arrow:hover{background:var(--yellow);color:var(--ink);transform:translateY(-50%) scale(1.06)}
+.carousel-prev{left:22px}.carousel-next{right:22px}
+.carousel-toolbar{position:absolute;z-index:5;left:24px;right:24px;bottom:22px;display:flex;align-items:center;gap:18px;color:var(--white);font-size:10px;letter-spacing:.14em}
+.carousel-dots{display:flex;gap:7px;align-items:center}.carousel-dot{width:28px;height:3px;padding:0;border:0;background:rgba(255,255,255,.35);cursor:pointer}.carousel-dot.active{background:var(--yellow)}
+.carousel-thumbs{position:absolute;z-index:5;right:24px;bottom:62px;display:flex;gap:7px}.carousel-thumb{width:48px;height:48px;padding:0;border:2px solid transparent;background:var(--dark);overflow:hidden;cursor:pointer;opacity:.7}.carousel-thumb.active{border-color:var(--yellow);opacity:1}.carousel-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.feature-image .image-label{bottom:64px;z-index:5}
+button:focus-visible,a:focus-visible{outline:2px solid var(--yellow);outline-offset:4px}
+@media(max-width:800px){.carousel-arrow{width:38px;height:38px;font-size:18px}.carousel-prev{left:14px}.carousel-next{right:14px}.carousel-thumbs{display:none}.carousel-toolbar{left:18px;right:18px;bottom:18px}.feature-image .image-label{bottom:54px;left:18px}.mobile-menu-cta{padding-bottom:calc(15px + env(safe-area-inset-bottom))}}
+
+.marquee-section{background:var(--yellow);color:var(--ink);padding:18px 0}.marquee-track{gap:42px;animation-duration:28s}.marquee-section:hover .marquee-track{animation-play-state:paused}.marquee-logo{display:inline-flex;align-items:baseline;gap:8px;white-space:nowrap;line-height:.8}.marquee-logo em{font-family:var(--serif);font-size:27px;font-style:italic;letter-spacing:-.08em}.marquee-logo strong{font-family:var(--display);font-size:42px;font-weight:400;letter-spacing:.02em}.marquee-logo small{font-family:var(--sans);font-size:7px;font-weight:700;letter-spacing:.18em;margin-left:2px}.marquee-track i{color:var(--plum);font-size:22px}
+.happy-days{position:absolute;z-index:4;left:50%;bottom:42px;transform:translateX(-50%);width:min(650px,calc(100% - 44px));justify-content:center;gap:25px}.happy-days .day{flex:1;text-align:center}.happy-days .day small{white-space:nowrap}
+@media(max-width:800px){.marquee-section{padding:14px 0}.marquee-logo em{font-size:22px}.marquee-logo strong{font-size:32px}.marquee-logo small{font-size:6px}.marquee-track{gap:25px}.happy-days{bottom:25px;width:calc(100% - 34px);gap:8px}.happy-days .day{min-width:0;padding-bottom:8px;font-size:20px}.happy-days .day small{font-size:8px;white-space:normal;line-height:1.15}.happy{padding-bottom:335px}}
+
+.burger-stack{transition:transform .25s ease}.burger-stack.is-updating{animation:builder-pop .45s ease}.ing-top{transition:height .3s ease,border-radius .3s ease,background .3s ease,transform .3s ease}.ing-top.new-york{height:72px;background:#c77843;border-radius:28px 28px 12px 12px;border:3px solid rgba(99,43,26,.22);transform:translateY(2px)}.ing-top.new-york small{color:#612f20}.burger-extras{display:flex;flex-direction:column;align-items:center;min-height:0;transition:min-height .3s ease}.burger-extras.has-extras{min-height:22px}.ingredient-extra{height:22px!important;width:235px!important;border-radius:14px;font-size:15px!important;letter-spacing:.02em;animation:ingredient-in .35s ease both;box-shadow:0 5px 10px rgba(0,0,0,.12)}.extra-bacon{background:#bb6548;color:#fff0df;transform:rotate(-2deg)}.extra-cheddar{background:#d79518;color:#6e430d;transform:rotate(2deg)}.extra-onion{background:#9b5a32;color:#f9dfbd;transform:skew(-7deg)}.extra-bbq{background:#57251f;color:#edc1a0;transform:rotate(-1deg)}
+@keyframes ingredient-in{from{opacity:0;transform:translateY(-12px) scale(.88)}to{opacity:1}}
+@keyframes builder-pop{0%{transform:scale(1)}45%{transform:scale(1.035)}100%{transform:scale(1)}}
+@media(max-width:800px){.ingredient-extra{width:min(235px,100%)!important;font-size:13px!important}.ing-top.new-york{height:72px}}
+@media(prefers-reduced-motion:reduce){.burger-stack.is-updating,.ingredient-extra{animation:none}.ing-top{transition:none}}
+
+/* Enquadramento das ofertas no círculo: pratos inteiros, drinks preenchendo o orb. */
+.drink-orb{background:var(--plum)}
+.drink-orb img{object-position:center center}
+.drink-orb[data-day="ter"] img,.drink-orb[data-day="qua"] img,.drink-orb[data-day="sex"] img{object-fit:contain;padding:16px;background:rgba(17,16,20,.24)}
+
+@media(max-width:800px){
+  .hero-actions{flex-wrap:wrap;row-gap:18px}
+  .hero-actions .btn-primary{padding:14px 16px}
+  .builder-controls{width:100%}
+  .builder-total{gap:12px;margin-top:30px}
+  .builder-total .btn{margin-left:auto}
+  .drink-orb[data-day="ter"] img,.drink-orb[data-day="qua"] img,.drink-orb[data-day="sex"] img{padding:12px}
+  .social-grid{grid-template-columns:1fr;gap:14px}
+  .social-grid img,.social-a,.social-b,.social-c{height:min(78vw,320px);margin-top:0}
+}
