@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pequenos detalhes — conceito Vet Prime</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root{--dark:#102a31;--yellow:#ffd433;--white:#fffdf9}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--dark)}
+    body{font-family:Inter,Arial,sans-serif;color:var(--white)}
+    .concept{min-height:100vh;position:relative;display:grid;place-items:center;overflow:hidden;background:var(--dark)}
+    .concept-photo{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1800&q=90') center/cover no-repeat;filter:saturate(.8)}
+    .concept-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,42,49,.22),rgba(16,42,49,.82) 58%,rgba(16,42,49,.98)),linear-gradient(0deg,rgba(16,42,49,.78),transparent 50%)}
+    .concept-copy{position:relative;z-index:2;width:min(1120px,88vw);margin-left:auto;margin-right:auto;text-align:right}
+    .eyebrow{display:inline-flex;margin:0 0 22px;padding:10px 15px;border-radius:999px;background:var(--yellow);color:var(--dark);font-size:11px;font-weight:800;letter-spacing:.14em;box-shadow:0 8px 18px rgba(0,0,0,.18)}
+    h1{max-width:720px;margin:0 0 20px;margin-left:auto;font-size:clamp(58px,8.5vw,132px);line-height:.82;letter-spacing:-.07em;text-transform:uppercase}
+    h1 em{display:block;color:var(--yellow);font:400 .68em/.9 'DM Serif Display',Georgia,serif;text-transform:none;letter-spacing:-.08em}
+    p{max-width:340px;margin:25px 0 0;margin-left:auto;color:#c7d9d9;font-size:15px;line-height:1.55}.cta{display:inline-flex;margin-top:24px;padding:14px 18px;border-radius:999px;background:var(--yellow);color:var(--dark);font-size:11px;font-weight:800;text-decoration:none;box-shadow:0 10px 22px rgba(0,0,0,.18)}
+    .detail{position:absolute;z-index:2;left:7vw;bottom:8vh;color:var(--yellow);font-size:38px;transform:rotate(-12deg)}
+    @media(max-width:700px){.concept-photo{background-position:42% center}.concept-shade{background:linear-gradient(180deg,rgba(16,42,49,.08),rgba(16,42,49,.76) 48%,rgba(16,42,49,.98) 100%)}.concept-copy{width:auto;margin:0 22px 35px;text-align:left;align-self:end}.eyebrow{font-size:9px;margin-bottom:18px;padding:8px 11px}h1{margin:0;font-size:clamp(54px,17vw,90px)}p{margin-left:0;font-size:13px;max-width:290px}.cta{font-size:10px;margin-top:19px}.detail{left:auto;right:8vw;bottom:31vh;font-size:30px}}
+  </style>
+</head>
+<body>
+  <main class="concept">
+    <div class="concept-photo" aria-hidden="true"></div>
+    <div class="concept-shade" aria-hidden="true"></div>
+    <div class="concept-copy">
+      <p class="eyebrow">A LOJA QUE CUIDA DE PERTO</p>
+      <h1>Pequenos <em>detalhes.</em><br />Grandes <em>cuidados.</em></h1>
+      <p>Um toque, um olhar, uma escolha feita com carinho. Porque o bem-estar deles mora nos pequenos detalhes.</p>
+      <a class="cta" href="https://wa.me/5541995306422?text=Olá%2C%20quero%20uma%20indicação%20de%20produto" target="_blank" rel="noreferrer">Pedir indicação ↗</a>
+    </div>
+    <span class="detail">✦</span>
+  </main>
+</body>
+</html>

@@ -1,0 +1,8 @@
+.service-card:nth-child(4){background-image:url('assets/dog-bed.png')!important;background-position:center 50%}
+.service-card:nth-child(3){background-image:url('assets/floating-kibble.png')!important;background-position:center 54%}
+.service-no{display:none}
+.service-card{position:relative;overflow:hidden}
+.service-card:after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(180deg,rgba(16,42,49,.06) 22%,rgba(16,42,49,.82) 100%);pointer-events:none}
+.service-card>*{position:relative;z-index:1}
+.contact h2 em{color:var(--teal-deep)!important}
+@media(max-width:850px){.service-card{min-height:320px;padding:22px 16px}.service-card h3{font-size:clamp(25px,7.5vw,34px);line-height:.9}.service-card p{font-size:11px;line-height:1.35;margin-top:16px}.service-card b{font-size:9px;letter-spacing:.04em}.service-icon{font-size:30px;margin:18px 0 16px}.contact h2 em{color:var(--teal-deep)!important}.contact-copy>p:not(.eyebrow){font-size:14px}}
